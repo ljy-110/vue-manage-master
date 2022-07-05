@@ -12,7 +12,7 @@
           style="width:50%"
         >
         </el-date-picker>
-        <span>{{Monday + ' -- ' + Sunday}}</span>
+        <span>{{Monday + ' 至 ' + Sunday}}</span>
       </el-form-item>
     </el-form>
   </div>
