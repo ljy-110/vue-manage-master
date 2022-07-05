@@ -1,0 +1,203 @@
+html,body,#app{
+  height: 100%;
+  margin:0;
+  padding: 0;
+}
+/**
+ * 重置样式
+ */
+ html {
+  font-family: 'Source Han Sans', "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(144, 147, 153, .3);
+  background-color: rgba(144, 147, 153, .3);
+}
+
+.h-center{
+  display: flex;
+  align-items: center;
+}
+.grid__2k{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 2vh;
+}
+.grid__4k{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(23%, 1fr));
+}
+.flex-wrap{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.flex-start{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.flex-end{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.between{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.f-center{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.mgl10{
+  margin-left: 10px;
+}
+.mgr10{
+  margin-right: 10px;
+}
+.mglr10{
+  margin: 0 10px;
+}
+.mgt30{
+  margin-top: 30px;
+}
+.mgb20{
+  margin-top: 20px;
+}
+.mgt10{
+  margin-top: 10px;
+}
+.mgb10{
+  margin-bottom: 10px;
+}
+.pdlr20{
+  padding: 0 20px;
+}
+.pdl{
+  padding-left: 10px;
+}
+.font12{
+  font-size: 12px;
+}
+.font14{
+  font-size: 14px;
+}
+.font16{
+  font-size: 16px;
+}
+.font18{
+  font-size: 18px;
+}
+.font20{
+  font-size: 20px;
+}
+.colf{
+  color: #fff;
+}
+.fweight{
+  font-weight: bold;
+}
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.tleft {
+  text-align: left;
+}
+
+.tright {
+  text-align: right;
+}
+
+.tellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bgz {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
