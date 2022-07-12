@@ -22,9 +22,9 @@
           <el-menu-item index="/nav2">选项2</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-      <el-menu-item index="/nav5">
+      <el-menu-item index="/gradientColor">
         <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
+        <span slot="title">渐变色</span>
       </el-menu-item>
       <el-menu-item index="/nav3">
         <i class="el-icon-document"></i>

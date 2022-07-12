@@ -10,6 +10,7 @@ import nav6 from '../components/content/nav6.vue'
 import top1 from '../components/content/top1.vue'
 import top2 from '../components/content/top2.vue'
 import DatePickerWeek from '@/page/DatePicker/DatePickerWeek'
+import gradientColor from '@/page/color/gradientColor'
 Vue.use(Router)
 
 export default new Router({
@@ -39,9 +40,9 @@ export default new Router({
           component: DatePickerWeek
         },
         {
-          path: '/nav2',
-          name: 'nav2',
-          component: nav2
+          path: '/gradientColor',
+          name: 'gradientColor',
+          component: gradientColor
         },
         {
           path: '/nav3',
