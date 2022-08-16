@@ -11,6 +11,9 @@ import top1 from '../components/content/top1.vue'
 import top2 from '../components/content/top2.vue'
 import DatePickerWeek from '@/page/DatePicker/DatePickerWeek'
 import gradientColor from '@/page/color/gradientColor'
+import linearGradientBG from '@/page/color/linearGradientBG'
+import table from '@/page/table/table';
+import flexCss from '@/page/css/flex';
 Vue.use(Router)
 
 export default new Router({
@@ -45,9 +48,19 @@ export default new Router({
           component: gradientColor
         },
         {
-          path: '/nav3',
-          name: 'nav3',
-          component: nav3
+          path: '/linearGradientBG',
+          name: 'linearGradientBG',
+          component: linearGradientBG
+        },
+        {
+          path: '/table',
+          name: 'table',
+          component: table
+        },
+        {
+          path: '/flexCss',
+          name: 'flexCss',
+          component: flexCss
         },
         {
           path: '/nav4',

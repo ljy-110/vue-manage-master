@@ -22,13 +22,33 @@
           <el-menu-item index="/nav2">选项2</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-      <el-menu-item index="/gradientColor">
+      <el-submenu index="2">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>颜色块</span>
+        </template>
+        <el-menu-item-group>
+          <!-- <template slot="title">分组一</template> -->
+          <el-menu-item index="/gradientColor">渐变色</el-menu-item>
+          <el-menu-item index="/linearGradientBG">渐变色背景</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>CSS</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/flexCss">Flex布局</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <!-- <el-menu-item index="/gradientColor">
         <i class="el-icon-menu"></i>
         <span slot="title">渐变色</span>
-      </el-menu-item>
-      <el-menu-item index="/nav3">
+      </el-menu-item> -->
+      <el-menu-item index="/table">
         <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
+        <span slot="title">表格</span>
       </el-menu-item>
       <el-menu-item index="/nav4">
         <i class="el-icon-setting"></i>
