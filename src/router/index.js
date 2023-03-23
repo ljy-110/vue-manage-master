@@ -14,6 +14,11 @@ import gradientColor from '@/page/color/gradientColor'
 import linearGradientBG from '@/page/color/linearGradientBG'
 import table from '@/page/table/table';
 import flexCss from '@/page/css/flex';
+import map3D from '@/page/echarts/3d/map3D'
+import worlkMap3d from '@/page/echarts/3d/wolkMapQiu'
+import baiduMapEcharts from '@/page/echarts/3d/baiduMapEcharts.vue'
+import weixinMap from '@/page/echarts/3d/weixinMap';
+import echartsMap from '@/page/echarts/china/echartsMap'
 Vue.use(Router)
 
 export default new Router({
@@ -81,7 +86,32 @@ export default new Router({
           path: '/top2',
           name: 'top2',
           component: top2
-        }
+        },
+        {
+          path: '/echarts/Map3d',
+          name: 'echartsMap3d',
+          component: map3D
+        },
+        {
+          path: '/echarts/worlkMap3d',
+          name: 'worlkMap3d',
+          component: worlkMap3d
+        },
+        {
+          path: '/echarts/baiduMapEcharts',
+          name: 'baiduMapEcharts',
+          component: baiduMapEcharts
+        },
+        {
+          path: '/echarts/weixinMap',
+          name: 'weixinMap',
+          component: weixinMap
+        },
+        {
+          path: '/echarts/echartsMap',
+          name: 'echartsMap',
+          component: echartsMap
+        },
       ]
     },
   ]

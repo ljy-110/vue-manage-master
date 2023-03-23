@@ -42,6 +42,27 @@
           <el-menu-item index="/flexCss">Flex布局</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="4">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>Echarts</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/echarts/Map3d">中国地图下砖广西</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <el-menu-item index="/echarts/worlkMap3d">全球中国</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <el-menu-item index="/echarts/baiduMapEcharts">百度地图Echarts</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <el-menu-item index="/echarts/weixinMap">卫星地图</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <el-menu-item index="/echarts/echartsMap">地图映射</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
       <!-- <el-menu-item index="/gradientColor">
         <i class="el-icon-menu"></i>
         <span slot="title">渐变色</span>

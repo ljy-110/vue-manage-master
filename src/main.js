@@ -10,9 +10,6 @@ import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios'
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-
-
 Vue.use(ElementUI)
 // Vue.use(api)
 Vue.prototype.$axios = axios
