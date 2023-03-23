@@ -10,7 +10,7 @@ import * as echarts from 'echarts';
 import 'echarts-gl';
 // import work from '@/assets/js/work.json';
 import China from '@/assets/js/China.json';
-import worldmap from '@/assets/image/worldmap.jpg'
+// import worldmap from '@/assets/image/worldmap.jpg'
 import mapL from '@/assets/image/map.png'
 import bathymetry from '@/assets/image/bathymetry_4k.jpg'
 export default {
