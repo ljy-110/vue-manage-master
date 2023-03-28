@@ -8,6 +8,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 // import api from './api/install'
 import axios from 'axios'
+import common from '../static/css/common.css'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
