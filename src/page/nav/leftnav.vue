@@ -63,6 +63,16 @@
           <el-menu-item index="/echarts/echartsMap">地图映射</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="4456">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>3D建模</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/threeGITF">threejs+glTF</el-menu-item>
+        </el-menu-item-group>
+        
+      </el-submenu>
       <!-- <el-menu-item index="/gradientColor">
         <i class="el-icon-menu"></i>
         <span slot="title">渐变色</span>

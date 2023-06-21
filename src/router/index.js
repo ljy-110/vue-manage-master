@@ -19,6 +19,7 @@ import worlkMap3d from '@/page/echarts/3d/wolkMapQiu'
 import baiduMapEcharts from '@/page/echarts/3d/baiduMapEcharts.vue'
 import weixinMap from '@/page/echarts/3d/weixinMap';
 import echartsMap from '@/page/echarts/china/echartsMap'
+import threeGITF from '@/page/three3D/threeGITF'
 Vue.use(Router)
 
 export default new Router({
@@ -111,6 +112,11 @@ export default new Router({
           path: '/echarts/echartsMap',
           name: 'echartsMap',
           component: echartsMap
+        },
+        {
+          path: '/threeGITF',
+          name: 'threeGITF',
+          component: threeGITF
         },
       ]
     },

@@ -96,4 +96,5 @@ body > .el-container {
   padding: 0px;
   border-left: 2px solid #333;
 }
+
 </style>
