@@ -1,46 +1,47 @@
 <template>
   <div>
     <table>
-  <thead>
-    <tr>
-      <th>姓名</th>
-      <th>语文成绩</th>
-      <th>数学成绩</th>
-      <th>英语成绩</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="3">张三</td>
-      <td>90</td>
-      <td>85</td>
-      <td>92</td>
-    </tr>
-    <tr>
-      <td>88</td>
-      <td>92</td>
-      <td>87</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>91</td>
-      <td>88</td>
-    </tr>
-    <tr>
-      <td>李四</td>
-      <td>92</td>
-      <td>93</td>
-      <td>95</td>
-    </tr>
-    <tr>
-      <td>王五</td>
-      <td>86</td>
-      <td>91</td>
-      <td>89</td>
-    </tr>
-  </tbody>
-</table>
-    <!-- <el-table :data="tableData" border style="width: 100%">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>语文成绩</th>
+          <th>数学成绩</th>
+          <th>英语成绩</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">张三</td>
+          <td>90</td>
+          <td>85</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <td>88</td>
+          <td>92</td>
+          <td>87</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>91</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <td>李四</td>
+          <td>92</td>
+          <td>93</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td>王五</td>
+          <td>86</td>
+          <td>91</td>
+          <td>89</td>
+        </tr>
+      </tbody>
+    </table>
+    <el-table :data="tableData" border style="width: 100%">
+      <el-table-column label="序号" type="index"> </el-table-column>
       <el-table-column prop="date" label="日期" width="180"> </el-table-column>
       <el-table-column prop="name" label="姓名" width="180"> </el-table-column>
       <el-table-column prop="address" label="地址"></el-table-column>
@@ -62,7 +63,7 @@
       </el-table-column>
       <el-table-column prop="status" label="状态" :formatter="formatStatus2">
       </el-table-column>
-    </el-table> -->
+    </el-table>
   </div>
 </template>
 

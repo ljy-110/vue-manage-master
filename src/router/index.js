@@ -20,6 +20,8 @@ import baiduMapEcharts from '@/page/echarts/3d/baiduMapEcharts.vue'
 import weixinMap from '@/page/echarts/3d/weixinMap';
 import echartsMap from '@/page/echarts/china/echartsMap'
 import threeGITF from '@/page/three3D/threeGITF'
+import jxyIframe from '@/page/iframe/jxyIframe';
+import mergeTable from '@/page/table/mergeTable'
 Vue.use(Router)
 
 export default new Router({
@@ -64,14 +66,19 @@ export default new Router({
           component: table
         },
         {
+          path: '/mergeTable',
+          name: 'mergeTable',
+          component: mergeTable
+        },
+        {
           path: '/flexCss',
           name: 'flexCss',
           component: flexCss
         },
         {
-          path: '/nav4',
-          name: 'nav4',
-          component: nav4
+          path: '/jxyIframe',
+          name: 'jxyIframe',
+          component: jxyIframe
         },
         {
           path: '/nav5',

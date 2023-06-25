@@ -77,13 +77,21 @@
         <i class="el-icon-menu"></i>
         <span slot="title">渐变色</span>
       </el-menu-item> -->
-      <el-menu-item index="/table">
-        <i class="el-icon-document"></i>
-        <span slot="title">表格</span>
-      </el-menu-item>
-      <el-menu-item index="/nav4">
+      <el-submenu index="4456781">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>表格</span>
+        </template>
+        <el-menu-item index="/table">
+          <span slot="title">表格</span>
+        </el-menu-item>
+        <el-menu-item index="/mergeTable">
+          <span slot="title">合并表格</span>
+        </el-menu-item>
+      </el-submenu>
+      <el-menu-item index="/jxyIframe">
         <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
+        <span slot="title">iframe</span>
       </el-menu-item>
     </el-menu>
     </div>
