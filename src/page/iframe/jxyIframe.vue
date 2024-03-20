@@ -1,6 +1,6 @@
 <template>
   <div class="iframe-contant">
-    <iframe class="iframe" src="http://43.138.139.30:9010/JxyAuth/31a8dcc0abf14ebcab9b50f25c54eeb4?name=测试账号"></iframe>
+    <iframe class="iframe" src="https://720yun.com/vr/74ejO0umsO5"></iframe>
   </div>
 </template>
 

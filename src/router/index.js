@@ -22,6 +22,9 @@ import echartsMap from '@/page/echarts/china/echartsMap'
 import threeGITF from '@/page/three3D/threeGITF'
 import jxyIframe from '@/page/iframe/jxyIframe';
 import mergeTable from '@/page/table/mergeTable'
+import oWebControl from '@/page/video/oWebControl'
+import h5player from '@/page/video/h5player'
+import ezuikitVideo from '@/page/video/ezuikitVideo'
 Vue.use(Router)
 
 export default new Router({
@@ -124,6 +127,21 @@ export default new Router({
           path: '/threeGITF',
           name: 'threeGITF',
           component: threeGITF
+        },
+        {
+          path: '/oWebControl',
+          name: 'oWebControl',
+          component: oWebControl
+        },
+        {
+          path: '/h5player',
+          name: 'h5player',
+          component: h5player
+        },
+        {
+          path: '/ezuikitVideo',
+          name: 'ezuikitVideo',
+          component: ezuikitVideo
         },
       ]
     },

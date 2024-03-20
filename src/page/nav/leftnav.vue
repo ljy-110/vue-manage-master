@@ -93,6 +93,22 @@
         <i class="el-icon-setting"></i>
         <span slot="title">iframe</span>
       </el-menu-item>
+      <el-submenu index="449851231551">
+        <template slot="title">
+          <i class="el-icon-video-camera"></i>
+          <span>视频插件</span>
+        </template>
+        <el-menu-item index="/oWebControl">
+          <span slot="title">海康视频插件</span>
+        </el-menu-item>
+        <el-menu-item index="/h5player">
+          <span slot="title">海康H5视频插件</span>
+        </el-menu-item>
+        <el-menu-item index="/ezuikitVideo">
+          <span slot="title">萤石云视频</span>
+        </el-menu-item>
+      </el-submenu>
+      
     </el-menu>
     </div>
   </div>

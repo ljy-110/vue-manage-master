@@ -13,6 +13,7 @@
           <el-button type="primary" style="width:100%;" @click="submitForm('ruleForm')" :loading="logining">登录</el-button>
         </el-form-item>
       </el-form>
+      <el-button type="" @click="fetchHtml">测试</el-button>
     </div>
   </div>
 </template>
@@ -56,6 +57,13 @@ export default {
           
         }
       })
+    },
+    fetchHtml(){
+      // fetch('http://192.168.4.2:8090/#/').then((result) => {
+        
+      // }).catch((err) => {
+        
+      // });
     },
   },
 

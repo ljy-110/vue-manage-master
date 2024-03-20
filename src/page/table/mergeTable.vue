@@ -47,18 +47,13 @@
       <el-table-column prop="projectContent" label="项目内容" header-align="center"> </el-table-column>
       <el-table-column label="建设类型" header-align="center">
         <template slot-scope="scope">
-          <el-checkbox v-model="scope.row.typeSelect">选择</el-checkbox>
+          <el-checkbox @change="getTypeSelect(scope.row)" v-model="scope.row.type">选择</el-checkbox>
         </template>
       </el-table-column>
-      <el-table-column label="建设类型">
+      <el-table-column prop="typeDec" label="建设类型"></el-table-column>
+      <el-table-column prop="num" label="数量" header-align="center">
         <template slot-scope="scope">
-          <el-checkbox v-model="scope.row.typeRadio">{{scope.row.typeRadioText}}</el-checkbox>
-          <!-- <el-radio v-model="scope.row.typeRadio" label="1">购买</el-radio> -->
-        </template>
-      </el-table-column>
-      <el-table-column prop="number" label="数量" header-align="center">
-        <template slot-scope="scope">
-          <el-input-number size="mini" :min="0" :precision="0" :step="1" v-model="scope.row.number"></el-input-number>
+          <el-input-number size="mini" :min="0" :precision="0" :step="1" v-model="scope.row.num"></el-input-number>
         </template>
       </el-table-column>
       <el-table-column prop="interpellation" show-overflow-tooltip label="要求说明" header-align="center"></el-table-column>
@@ -85,7 +80,10 @@ export default {
   mounted() {},
   created() {},
   methods: {
-     handerMethod({ row, column, rowIndex, columnIndex }) {
+    getTypeSelect(row){
+      // console.log(row);
+    },
+    handerMethod({ row, column, rowIndex, columnIndex }) {
       if (rowIndex === 0) {//行索引为0代表表头那一行
         if (columnIndex === 3) {//列索引，找到你自己要合并的那一列，这个是动态的，根据实际需求来
           this.$nextTick(() => {

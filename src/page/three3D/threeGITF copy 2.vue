@@ -8,9 +8,7 @@
 	import * as THREE from "three";
 	import * as TWEEN from 'tween.js'
 	import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-	import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-	
 	import markerIcon from '@/assets/image/home/mapIcon.png'
 	export default {
 	  name: "baseGeometry",
@@ -31,20 +29,8 @@
 	    init() {
 				let that = this
 	      let container = document.getElementById("container"); //容器
-
-				
-
 				this.scene = new THREE.Scene(); //初始化场景
-
-				
-
         let loader = new GLTFLoader();
-
-				const dracoLoader = new DRACOLoader()
-				dracoLoader.setDecoderPath('/static/draco/gltf/')
-				// dracoLoader.setDecoderConfig({ type: "js" });
-				dracoLoader.preload();
-
 				this.camera = new THREE.PerspectiveCamera(
 	        75,
 	        container.clientWidth / container.clientHeight,
@@ -55,18 +41,106 @@
 
 				// 该对象用于跟踪时间
 				this.clock = new THREE.Clock();
-				loader.setDRACOLoader(dracoLoader);
-        loader.load('/static/hod-min.glb',gltf => {
-					console.log(gltf);
+
+        loader.load('../../../static/hlj.glb',gltf => {
+					// console.log(gltf);
 					const box = new THREE.Box3().setFromObject(gltf.scene);
 					const size = box.getSize(new THREE.Vector3()).length();
 					const center = box.getCenter(new THREE.Vector3());
+					// gltf.scene.position.x -= center.x;
+					// gltf.scene.position.y -= center.y;
+					// gltf.scene.position.z -= center.z;
+					// 居中问题，手动调试
 					gltf.scene.position.x = center.x - 0.7;
 					gltf.scene.position.y = center.y + 0.1;
 					gltf.scene.position.z = center.z + 1;
+					// this.camera.near = size / 100;
+					// this.camera.far = size * 100;
+					// this.camera.updateProjectionMatrix();
+					// this.camera.position.copy(center);
+					// this.camera.position.x += size / 2;
+					// this.camera.position.y += size / 2;
+					// this.camera.position.z += size / 2;
+					// this.camera.lookAt(center);
+					// 将模型的中心点设置到canvas坐标系的中心点，保证模型显示是居中的，object就是操作的目标模型
+					// let box = new THREE.Box3().setFromObject(gltf.scene); // 获取模型的包围盒
+					// console.log(gltf.scene.position);
+					// console.log(center);
+					// let mdlen = box.max.x - box.min.x; // 模型长度
+					// let mdwid = box.max.z - box.min.z; // 模型宽度
+					// let mdhei = box.max.y - box.min.y; // 模型高度
+					// let x1 = box.min.x + mdlen / 2; // 模型中心点坐标X
+					// let y1 = box.min.y + mdhei / 2; // 模型中心点坐标Y
+					// let z1 = box.min.z + mdwid / 2; // 模型中心点坐标Z
+					// gltf.scene.position.set(-x1, -y1, -z1); // 将模型进行偏移
           gltf.scene.scale.set(8,8,8)  //  设置模型大小缩放
+          // gltf.scene.position.set(0,0,0)
+
+					// 测试标点
+					// const textureLoader = new THREE.TextureLoader();
+					// const markerTexture = textureLoader.load(markerIcon);
+					// const markerGeometry = new THREE.BoxGeometry(3, 3, 3);
+					// const markerMaterial = new THREE.MeshBasicMaterial({ map: markerTexture }); // 将图片资源作为材质使用
+					// const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial);
+					// markerMesh.position.set(0.5, 0.5, 0.5);
+					// gltf.scene.add(markerMesh);
+					// console.log(gltf.scene);
           this.scene.add(gltf.scene);
+					// 动画
+					// const targetScale = new THREE.Vector3(12,12,12);
+					// const tween = new TWEEN.Tween(gltf.scene.scale)
+					// tween.to(targetScale, 1000)
+					// tween.easing(TWEEN.Easing.Quadratic.InOut)
+					// tween.onUpdate(() => {
+					// 		// 每帧更新模型的缩放属性
+					// 		// gltf.scene.scale.set(12,12,12);
+					// })
+					// tween.start();
+					// // this.mixer = new THREE.AnimationMixer( gltf.scene );
+					// this.mixer.clipAction( gltf.animations[5] ).play(); // use clip
+
+					
         })
+
+				// 标点
+				// const textureLoader = new THREE.TextureLoader()
+				// textureLoader.load(require('../../assets/image/home/mapIcon.png'), (texture) => {
+				// 	const geometry = new THREE.SphereGeometry( 0.1, 0.1, 0.1);
+				// 	const material = new THREE.MeshBasicMaterial({ color:'#fff'});
+				// 	const cube = new THREE.Points( geometry, material );
+				// 	that.scene.add( cube );
+				// 	// this.camera.position.z = 5;
+				// 	const spriteMaterial = new THREE.SpriteMaterial({ map: texture })
+				// 	const sprite = new THREE.Sprite(spriteMaterial)
+				// 	sprite.position.set(0, 1, 0)
+				// 	sprite.scale.set(0.1, 0.1, 0.1)
+				// 	that.scene.add(sprite)
+				// })
+	      
+				// 将模型放到中间
+				
+	      // var geometry1 = new THREE.DodecahedronBufferGeometry(0.1); //多面体
+	      // let material1 = new THREE.MeshLambertMaterial({
+	      //   color: 0x409eff,
+	      //   transparent: true, //是否透明
+	      //   opacity: 0.5, //透明度
+	      // });
+	      // var mesh1 = new THREE.Mesh(geometry1, material1); //材质跟立方体
+	      // this.scene.add(mesh1); //add到场景中
+	
+	      // var geometry2 = new THREE.BoxGeometry(0.1, 0.1, 0.1); //多面体
+	      // let material2 = new THREE.MeshLambertMaterial({ color: 0x7dd427 });
+	      // var mesh2 = new THREE.Mesh(geometry2, material2); //材质跟立方体
+	      // this.mesh2 = mesh2;
+	      // mesh2.position.set(0, 0.2, 0); //Y偏移0.2
+	      // this.scene.add(mesh2); //add到场景中
+	
+	      // var geometry3 = new THREE.SphereGeometry(0.1, 32, 32); //球体//多面体
+	      // let material3 = new THREE.MeshLambertMaterial({});
+	      // var mesh3 = new THREE.Mesh(geometry3, material3); //材质跟立方体
+	      // mesh3.position.set(0.3, 0, 0); //X偏移0.3
+	      // this.scene.add(mesh3); //add到场景中
+	
 	      //添加点光源
 	      var point = new THREE.PointLight(0x409EFF);
 	      point.position.set(400, 10, 500);
@@ -76,6 +150,14 @@
 	      var ambient = new THREE.AmbientLight(0xffffff);
 	      this.scene.add(ambient);
 
+				// 贴图
+				// const texture = new THREE.TextureLoader().load('../../assets/image/2.png');
+				// texture.wrapS = THREE.RepeatWrapping;
+				// texture.wrapT = THREE.RepeatWrapping;
+				// texture.repeat.set( 4, 4 );
+				// // let material = new THREE.MeshBasicMaterial();
+				// // material.map = texture;
+ 				// this.scene.add(texture)
 
 	      this.renderer = new THREE.WebGLRenderer({ antialias: true }); //render函数
 	      this.renderer.setSize(container.clientWidth, container.clientHeight); //设置render的尺寸
