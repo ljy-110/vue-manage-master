@@ -25,6 +25,7 @@ import mergeTable from '@/page/table/mergeTable'
 import oWebControl from '@/page/video/oWebControl'
 import h5player from '@/page/video/h5player'
 import ezuikitVideo from '@/page/video/ezuikitVideo'
+import model from '@/page/cesium/model'
 Vue.use(Router)
 
 export default new Router({
@@ -142,6 +143,11 @@ export default new Router({
           path: '/ezuikitVideo',
           name: 'ezuikitVideo',
           component: ezuikitVideo
+        },
+        {
+          path: '/model',
+          name: 'model',
+          component: model
         },
       ]
     },

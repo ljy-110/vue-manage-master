@@ -13,7 +13,7 @@
       <h3 class="logobox">测试系统</h3>
       <el-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-date"></i>
           <span>时间选择组件</span>
         </template>
         <el-menu-item-group>
@@ -24,7 +24,7 @@
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-s-opportunity"></i>
           <span>颜色块</span>
         </template>
         <el-menu-item-group>
@@ -35,7 +35,7 @@
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-s-open"></i>
           <span>CSS</span>
         </template>
         <el-menu-item-group>
@@ -44,7 +44,7 @@
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-s-data"></i>
           <span>Echarts</span>
         </template>
         <el-menu-item-group>
@@ -65,11 +65,12 @@
       </el-submenu>
       <el-submenu index="4456">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-s-grid"></i>
           <span>3D建模</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/threeGITF">threejs+glTF</el-menu-item>
+          <el-menu-item index="/model">cesium</el-menu-item>
         </el-menu-item-group>
         
       </el-submenu>
@@ -79,7 +80,7 @@
       </el-menu-item> -->
       <el-submenu index="4456781">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-menu"></i>
           <span>表格</span>
         </template>
         <el-menu-item index="/table">
