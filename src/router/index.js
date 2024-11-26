@@ -26,6 +26,8 @@ import oWebControl from '@/page/video/oWebControl'
 import h5player from '@/page/video/h5player'
 import ezuikitVideo from '@/page/video/ezuikitVideo'
 import model from '@/page/cesium/model'
+import viewFiles from '@/page/viewFiles/viewFiles.vue'
+import Login from '@/page/login/login.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -33,7 +35,7 @@ export default new Router({
     {
       path: '/',
       name: '',
-      component: nav6,
+      component: Login,
       hidden: true,
       meta: {
           requireAuth: false
@@ -148,6 +150,11 @@ export default new Router({
           path: '/model',
           name: 'model',
           component: model
+        },
+        {
+          path: '/viewFiles',
+          name: '附件预览',
+          component: viewFiles
         },
       ]
     },

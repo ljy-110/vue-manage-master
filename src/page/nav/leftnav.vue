@@ -9,7 +9,7 @@
       background-color="#334157"
       text-color="#fff"
       active-text-color="#ffd04b"
-      router>
+      router :unique-opened="true">
       <h3 class="logobox">测试系统</h3>
       <el-submenu index="1">
         <template slot="title">
@@ -109,7 +109,10 @@
           <span slot="title">萤石云视频</span>
         </el-menu-item>
       </el-submenu>
-      
+      <el-menu-item index="/viewFiles">
+        <i class="el-icon-folder-opened"></i>
+        <span slot="title">附件预览</span>
+      </el-menu-item>
     </el-menu>
     </div>
   </div>
