@@ -28,6 +28,7 @@ import ezuikitVideo from '@/page/video/ezuikitVideo'
 import model from '@/page/cesium/model'
 import viewFiles from '@/page/viewFiles/viewFiles.vue'
 import Login from '@/page/login/login.vue'
+import leaflet from '@/page/leaflet/leaflet.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -155,6 +156,11 @@ export default new Router({
           path: '/viewFiles',
           name: '附件预览',
           component: viewFiles
+        },
+        {
+          path: '/leaflet',
+          name: 'leaflet',
+          component: leaflet
         },
       ]
     },

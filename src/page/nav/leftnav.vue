@@ -113,6 +113,18 @@
         <i class="el-icon-folder-opened"></i>
         <span slot="title">附件预览</span>
       </el-menu-item>
+      <el-submenu index="4444222222231551">
+        <template slot="title">
+          <i class="el-icon-video-camera"></i>
+          <span>天地图</span>
+        </template>
+        <el-menu-item index="/leaflet">
+          <span slot="title">leaflet</span>
+        </el-menu-item>
+        <!-- <el-menu-item index="/h5player">
+          <span slot="title">海康H5视频插件</span>
+        </el-menu-item> -->
+      </el-submenu>
     </el-menu>
     </div>
   </div>
