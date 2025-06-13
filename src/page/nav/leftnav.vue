@@ -125,6 +125,10 @@
           <span slot="title">海康H5视频插件</span>
         </el-menu-item> -->
       </el-submenu>
+      <el-menu-item index="/hookMock">
+        <i class="el-icon-folder-opened"></i>
+        <span slot="title">模拟数据</span>
+      </el-menu-item>
     </el-menu>
     </div>
   </div>

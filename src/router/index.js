@@ -29,6 +29,7 @@ import model from '@/page/cesium/model'
 import viewFiles from '@/page/viewFiles/viewFiles.vue'
 import Login from '@/page/login/login.vue'
 import leaflet from '@/page/leaflet/leaflet.vue'
+import hookMock from '@/page/hookMock/hookMock.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -161,6 +162,11 @@ export default new Router({
           path: '/leaflet',
           name: 'leaflet',
           component: leaflet
+        },
+        {
+          path: '/hookMock',
+          name: 'hookMock',
+          component: hookMock
         },
       ]
     },
