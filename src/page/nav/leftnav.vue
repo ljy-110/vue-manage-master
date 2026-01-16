@@ -19,7 +19,7 @@
         <el-menu-item-group>
           <!-- <template slot="title">分组一</template> -->
           <el-menu-item index="/DatePickerWeek">选择周</el-menu-item>
-          <el-menu-item index="/nav2">选项2</el-menu-item>
+          <el-menu-item index="/calendar">日历</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">

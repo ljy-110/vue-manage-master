@@ -34,7 +34,8 @@
     "vue-demi": "^0.14.6",
     "vue-pdf": "^4.3.0",
     "vue-router": "^3.0.1",
-    "vuex": "^3.5.1"
+    "vuex": "^3.5.1",
+    "dayjs": "1.8.14"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
